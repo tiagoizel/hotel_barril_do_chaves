@@ -1,0 +1,555 @@
+<!-- <%- include("_header") -%>
+
+<h1>Bonjour le monde...</h1>
+
+<%- include("_footer") -%> -->
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <title>HBC</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/main.css">
+    <script src="https://kit.fontawesome.com/dbed6b6114.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="images/logo.png" type="image/png">
+</head>
+
+<body>
+
+    <!-- header -->
+    <header class="header" id="header">
+        <div class="head-top">
+            <div class="site-name">
+                <span>Bem vindo(a)</span>
+            </div>
+            <div class="site-nav">
+                <span id="nav-btn">MENU <i class="fas fa-bars"></i></span>
+            </div>
+        </div>
+
+        <div class="head-bottom flex">
+            <h2>HOTEL BARRIL DO CHAVES</h2>
+            <p>Um lugar nostálgico, feliz e confortável para se hospedar, desfrute dos nossos melhores serviços,
+                trabalhamos sempre buscando o melhor com amor, carinho e dedicação. </p>
+            <button type="button" class="head-btn"><i class="fas fa-arrow-down"></i>&nbsp;&nbsp; CONHEÇA &nbsp;&nbsp;<i
+                    class="fas fa-arrow-down"></i></button>
+        </div>
+    </header>
+    <!-- end of header -->
+
+    <!-- side navbar -->
+    <div class="sidenav" id="sidenav">
+        <span class="cancel-btn" id="cancel-btn">
+            <i class="fas fa-times"></i>
+        </span>
+
+        <ul class="navbar">
+            <li><a href="#header">Inicio</a></li>
+            <li><a href="#services">Serviços</a></li>
+            <li><a href="#rooms">Quartos</a></li>
+            <li><a href="#customers">Clientes</a></li>
+        </ul>
+        <a href="/cadastro" class="btn sign-up">Cadastre-se</a>
+        <button class="btn log-in">Entrar</button>
+    </div>
+    <!-- end of side navbar -->
+
+    <!-- fullscreen modal -->
+    <div id="modal"></div>
+    <!-- end of fullscreen modal -->
+
+    <!-- body content  -->
+    <section class="services sec-width" id="services">
+        <div class="title">
+            <h2>Serviços</h2>
+        </div>
+        <div class="services-container">
+            <!-- single service -->
+            <article class="service">
+                <div class="service-icon">
+                    <span>
+                        <i class="fas fa-utensils"></i>
+                    </span>
+                </div>
+                <div class="service-content">
+                    <h2>Praça de alimentação</h2>
+                    <p>Desfrute de nossa melhor comida, comidas típicas, conheça nosso tambaqui, gororoba, comidas
+                        regionais, vatapá e esse texto aqui é só um teste!</p>
+                    <button type="button" class="btn">Saber mais</button>
+                </div>
+            </article>
+            <!-- end of single service -->
+            <!-- single service -->
+            <article class="service">
+                <div class="service-icon">
+                    <span>
+                        <i class="fas fa-swimming-pool"></i>
+                    </span>
+                </div>
+                <div class="service-content">
+                    <h2>Área de lazer</h2>
+                    <p>Aqui ficará imagem área de lazer do hotel barril do chaves! Aguardando imagem</p>
+                    <button type="button" class="btn">Saber mais</button>
+                </div>
+            </article>
+            <!-- end of single service -->
+            <!-- single service -->
+            <article class="service">
+                <div class="service-icon">
+                    <span>
+                        <i class="fas fa-broom"></i>
+                    </span>
+                </div>
+                <div class="service-content">
+                    <h2>Serviço de Limpeza</h2>
+                    <p>Local onde ficará imagem serviço de limpeza, porém não é certo que terá essa parte no site, está
+                        em analise................................</p>
+                    <button type="button" class="btn">Saber mais</button>
+                </div>
+            </article>
+            <!-- end of single service -->
+            <!-- single service -->
+            <article class="service">
+                <div class="service-icon">
+                    <span>
+                        <i class="fas fa-door-closed"></i>
+                    </span>
+                </div>
+                <div class="service-content">
+                    <h2>Segurança da sala</h2>
+                    <p>Local onde ficará imagem segurança da sala, porém não é certo que terá essa parte, está em
+                        analise.................................</p>
+                    <button type="button" class="btn">Saber mais</button>
+                </div>
+            </article>
+            <!-- end of single service -->
+        </div>
+    </section>
+
+    <!-- <div class = "book">
+            <form class = "book-form">
+                <div class = "form-item">
+                    <label for = "checkin-date">Data de Cheek in: </label>
+                    <input type = "date" id = "chekin-date">
+                </div>
+                <div class = "form-item">
+                    <label for = "checkout-date">Data de Check Out: </label>
+                    <input type = "date" id = "chekout-date">
+                </div>
+                <div class = "form-item">
+                    <label for = "adult">Adultos: </label>
+                    <input type = "number" min = "1" value = "1" id = "adult">
+                </div>
+                <div class = "form-item">
+                    <label for = "children">Criança: </label>
+                    <input type = "number" min = "1" value = "1" id = "children">
+                </div>
+                <div class = "form-item">
+                    <label for = "rooms">Quartos: </label>
+                    <input type = "number" min = "1" value = "1" id = "rooms">
+                </div>
+                <div class = "form-item">
+                    <input type = "submit" class = "btn" value = "Reserve agora">
+                </div>
+            </form>
+        </div> -->
+
+    <section class="rooms sec-width" id="rooms">
+        <div class="title">
+            <h2>rooms</h2>
+        </div>
+        <div class="rooms-container">
+            <!-- single room -->
+            <article class="room">
+                <div class="room-image">
+                    <img src="/img/quarto_1.jpg" alt="room image">
+                </div>
+                <div class="room-text">
+                    <h3>Quarto 71</h3>
+                    <ul>
+                        <li>
+                            <i class="fas fa-arrow-alt-circle-right"></i>
+                            Lorem ipsum dolor sit amet.
+                        </li>
+                        <li>
+                            <i class="fas fa-arrow-alt-circle-right"></i>
+                            Lorem ipsum dolor sit amet.
+                        </li>
+                        <li>
+                            <i class="fas fa-arrow-alt-circle-right"></i>
+                            Lorem ipsum dolor sit amet.
+                        </li>
+                    </ul>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus exercitationem repellendus
+                        maxime ullam tempore architecto provident unde expedita quam beatae, dolore eligendi molestias
+                        sint tenetur incidunt voluptas. Unde corporis qui iusto vitae. Aut nesciunt id iste, cum esse
+                        commodi nemo?</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla corporis quasi officiis cumque,
+                        fugiat nostrum sunt, tempora animi dicta laborum beatae ratione doloremque. Delectus odio sit
+                        eius labore, atque quo?</p>
+                    <p class="rate">
+                        <span>R$ 99.00 /</span> Por Noite
+                    </p>
+                    <button type="button" class="btn" data-id="71" data-nome="Quarto 71" data-toggle="modal" data-target="#modalQuarto71">Reservar
+                        agora</button>
+                </div>
+            </article>
+            <!-- end of single room -->
+            <!-- single room -->
+            <article class="room">
+                <div class="room-image">
+                    <img src="/img/quarto_2.jpg" alt="room image">
+                </div>
+                <div class="room-text">
+                    <h3>Quarto 14</h3>
+                    <ul>
+                        <li>
+                            <i class="fas fa-arrow-alt-circle-right"></i>
+                            Lorem ipsum dolor sit amet.
+                        </li>
+                        <li>
+                            <i class="fas fa-arrow-alt-circle-right"></i>
+                            Lorem ipsum dolor sit amet.
+                        </li>
+                        <li>
+                            <i class="fas fa-arrow-alt-circle-right"></i>
+                            Lorem ipsum dolor sit amet.
+                        </li>
+                    </ul>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus exercitationem repellendus
+                        maxime ullam tempore architecto provident unde expedita quam beatae, dolore eligendi molestias
+                        sint tenetur incidunt voluptas. Unde corporis qui iusto vitae. Aut nesciunt id iste, cum esse
+                        commodi nemo?</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla corporis quasi officiis cumque,
+                        fugiat nostrum sunt, tempora animi dicta laborum beatae ratione doloremque. Delectus odio sit
+                        eius labore, atque quo?</p>
+                    <p class="rate">
+                        <span>R$ 99.00 /</span> Por Noite
+                    </p>
+                    <button type="button" class="btn" data-id="14" data-nome="Quarto 14" data-toggle="modal" data-target="#modalQuarto14">Reservar
+                        agora</button>
+                </div>
+            </article>
+            <!-- end of single room -->
+            <!-- single room -->
+            <article class="room">
+                <div class="room-image">
+                    <img src="/img/quarto_3.jpg" alt="room image">
+                </div>
+                <div class="room-text">
+                    <h3>Quarto 72</h3>
+                    <ul>
+                        <li>
+                            <i class="fas fa-arrow-alt-circle-right"></i>
+                            Lorem ipsum dolor sit amet.
+                        </li>
+                        <li>
+                            <i class="fas fa-arrow-alt-circle-right"></i>
+                            Lorem ipsum dolor sit amet.
+                        </li>
+                        <li>
+                            <i class="fas fa-arrow-alt-circle-right"></i>
+                            Lorem ipsum dolor sit amet.
+                        </li>
+                    </ul>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus exercitationem repellendus
+                        maxime ullam tempore architecto provident unde expedita quam beatae, dolore eligendi molestias
+                        sint tenetur incidunt voluptas. Unde corporis qui iusto vitae. Aut nesciunt id iste, cum esse
+                        commodi nemo?</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla corporis quasi officiis cumque,
+                        fugiat nostrum sunt, tempora animi dicta laborum beatae ratione doloremque. Delectus odio sit
+                        eius labore, atque quo?</p>
+                    <p class="rate">
+                        <span>R$ 99.00 /</span> Por Noite
+                    </p>
+                    <button type="button" class="btn" data-id="72" data-nome="Quarto 72" data-toggle="modal" data-target="#modalQuarto72">Reservar
+                        agora</button>
+                </div>
+            </article>
+            <!-- end of single room -->
+        </div>
+    </section>
+
+
+    <section class="customers" id="customers">
+        <div class="sec-width">
+            <div class="title">
+                <h2>customers</h2>
+            </div>
+            <div class="customers-container">
+                <!-- single customer -->
+                <div class="customer">
+                    <div class="rating">
+                        <span><i class="fas fa-star"></i></span>
+                        <span><i class="fas fa-star"></i></span>
+                        <span><i class="fas fa-star"></i></span>
+                        <span><i class="fas fa-star"></i></span>
+                        <span><i class="far fa-star"></i></span>
+                    </div>
+                    <h3>We Loved it</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat beatae veritatis provident
+                        eveniet praesentium veniam cum iusto distinctio esse, vero est autem, eius optio cupiditate?</p>
+                    <img src="/img/cliente_1.jpg" alt="customer image">
+                    <span>Dona Clotilde, Rio de Janeiro</span>
+                </div>
+                <!-- end of single customer -->
+                <!-- single customer -->
+                <div class="customer">
+                    <div class="rating">
+                        <span><i class="fas fa-star"></i></span>
+                        <span><i class="fas fa-star"></i></span>
+                        <span><i class="fas fa-star"></i></span>
+                        <span><i class="fas fa-star"></i></span>
+                        <span><i class="far fa-star"></i></span>
+                    </div>
+                    <h3>Comfortable Living</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat beatae veritatis provident
+                        eveniet praesentium veniam cum iusto distinctio esse, vero est autem, eius optio cupiditate?</p>
+                    <img src="/img/cliente_2.jpg" alt="customer image">
+                    <span>Dona Florinda, Manaus</span>
+                </div>
+                <!-- end of single customer -->
+                <!-- single customer -->
+                <div class="customer">
+                    <div class="rating">
+                        <span><i class="fas fa-star"></i></span>
+                        <span><i class="fas fa-star"></i></span>
+                        <span><i class="fas fa-star"></i></span>
+                        <span><i class="fas fa-star"></i></span>
+                        <span><i class="far fa-star"></i></span>
+                    </div>
+                    <h3>Nice Place</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat beatae veritatis provident
+                        eveniet praesentium veniam cum iusto distinctio esse, vero est autem, eius optio cupiditate?</p>
+                    <img src="/img/cliente_3.jpg" alt="customer image">
+                    <span>John Kent, São Paulo</span>
+                </div>
+                <!-- end of single customer -->
+            </div>
+        </div>
+    </section>
+    <!-- end of body content -->
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div>
+                <h2>About Us </h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque sapiente mollitia doloribus
+                    provident? Eos quisquam aliquid vel dolorum, impedit culpa.</p>
+                <ul class="social-icons">
+                    <li class="flex">
+                        <i class="fa fa-twitter fa-2x"></i>
+                    </li>
+                    <li class="flex">
+                        <i class="fa fa-facebook fa-2x"></i>
+                    </li>
+                    <li class="flex">
+                        <i class="fa fa-instagram fa-2x"></i>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <h2>Useful Links</h2>
+                <a href="#">Blog</a>
+                <a href="#">Rooms</a>
+                <a href="#">Subscription</a>
+                <a href="#">Gift Card</a>
+            </div>
+
+            <div>
+                <h2>Privacy</h2>
+                <a href="#">Career</a>
+                <a href="#">About Us</a>
+                <a href="#">Contact Us</a>
+                <a href="#">Services</a>
+            </div>
+
+            <div>
+                <h2>Have A Question</h2>
+                <div class="contact-item">
+                    <span>
+                        <i class="fas fa-map-marker-alt"></i>
+                    </span>
+                    <span>
+                        203 Fake St.Mountain View, San Francisco, California, USA
+                    </span>
+                </div>
+                <div class="contact-item">
+                    <span>
+                        <i class="fas fa-phone-alt"></i>
+                    </span>
+                    <span>
+                        +84545 37534 48
+                    </span>
+                </div>
+                <div class="contact-item">
+                    <span>
+                        <i class="fas fa-envelope"></i>
+                    </span>
+                    <span>
+                        info@domain.com
+                    </span>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- end of footer -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="modalQuarto71" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Reservar Quarto</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <form >
+                        <div class="form-group">
+                            <label for = "checkin-date">Data de Cheek in: </label>
+                            <input type="date" class="form-control" id="chekin-date">
+                        </div>
+                        <div class="form-group">
+                            <label for="checkout-date">Data de Check Out: </label>
+                            <input type="date" class="form-control" id = "chekout-date">
+                        </div>
+                        <div class="form-group">
+                            <label for = "adult">Adultos: </label>
+                            <input type = "number" min = "1" value = "1" class="form-control" id = "adult">
+                        </div>
+                        <div class="form-group">
+                            <label for = "children">Criança: </label>
+                            <input type = "number" min = "1" value = "1" class="form-control" id = "children">
+                        </div>
+                        <div class="form-group">
+                            <label for = "rooms">Quartos: </label>
+                            <input type = "number" min = "1" value = "1" class="form-control" id = "rooms">
+                        </div>
+                        <!-- <div class="form-group">
+                            <input type = "submit" class = "btn" value = "Reserve agora">
+                        </div> -->
+                    </form>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="modalQuarto72" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Reservar Quarto</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <form >
+                        <div class="form-group">
+                            <label for = "checkin-date">Data de Cheek in: </label>
+                            <input type="date" class="form-control" id="chekin-date">
+                        </div>
+                        <div class="form-group">
+                            <label for="checkout-date">Data de Check Out: </label>
+                            <input type="date" class="form-control" id = "chekout-date">
+                        </div>
+                        <div class="form-group">
+                            <label for = "adult">Adultos: </label>
+                            <input type = "number" min = "1" value = "1" class="form-control" id = "adult">
+                        </div>
+                        <div class="form-group">
+                            <label for = "children">Criança: </label>
+                            <input type = "number" min = "1" value = "1" class="form-control" id = "children">
+                        </div>
+                        <div class="form-group">
+                            <label for = "rooms">Quartos: </label>
+                            <input type = "number" min = "1" value = "1" class="form-control" id = "rooms">
+                        </div>
+                        <!-- <div class="form-group">
+                            <input type = "submit" class = "btn" value = "Reserve agora">
+                        </div> -->
+                    </form>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="modalQuarto14" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Reservar Quarto</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <form >
+                        <div class="form-group">
+                            <label for = "checkin-date">Data de Cheek in: </label>
+                            <input type="date" class="form-control" id="chekin-date">
+                        </div>
+                        <div class="form-group">
+                            <label for="checkout-date">Data de Check Out: </label>
+                            <input type="date" class="form-control" id = "chekout-date">
+                        </div>
+                        <div class="form-group">
+                            <label for = "adult">Adultos: </label>
+                            <input type = "number" min = "1" value = "1" class="form-control" id = "adult">
+                        </div>
+                        <div class="form-group">
+                            <label for = "children">Criança: </label>
+                            <input type = "number" min = "1" value = "1" class="form-control" id = "children">
+                        </div>
+                        <div class="form-group">
+                            <label for = "rooms">Quartos: </label>
+                            <input type = "number" min = "1" value = "1" class="form-control" id = "rooms">
+                        </div>
+                        <!-- <div class="form-group">
+                            <input type = "submit" class = "btn" value = "Reserve agora">
+                        </div> -->
+                    </form>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+            crossorigin="anonymous"></script>
+        <script src="/js/script.js"></script>
+</body>
+
+</html>
