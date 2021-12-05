@@ -1,0 +1,36 @@
+`CREATE TABLE IF NOT EXISTS HOSPEDE (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    nome VARCHAR(100) NOT NULL,
+    sexo VARCHAR(10) NOT NULL,
+    cpf varchar(11) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    telefone VARCHAR(25),
+    data_nascimento VARCHAR(10),
+    endereco TEXT
+);`
+
+`CREATE TABLE IF NOT EXISTS QUARTO (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    titulo VARCHAR(100) NOT NULL,
+    descricao TEXT NOT NULL
+);`
+
+`CREATE TABLE IF NOT EXISTS ADMIN(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    email VARCHAR(100) NOT NULL,
+    senha VARCHAR(100) NOT NULL
+);`
+
+`CREATE TABLE IF NOT EXISTS HOSPEDAGEM (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    id_hospede INTEGER,
+    id_quarto INTEGER,
+    data_inicio VARCHAR(15),
+    data_fim VARCHAR(15),
+    qtd_adultos INTEGER,
+    qtd_criancas INTEGER,
+    observacao TEXT,
+    FOREIGN KEY(id_hospedagem) REFERENCES HOSPEDE(id),
+    FOREIGN KEY(id_quarto) REFERENCES QUARTO(id)
+);`
+
