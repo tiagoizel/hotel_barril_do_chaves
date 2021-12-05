@@ -1,0 +1,37 @@
+<%- include("_header") -%>
+
+<div class="mt-5">
+  <h1>Lista de Hospedagens (<%= hospedagens.length %>)</h1>
+
+  <div class="table-responsive-sm">
+    <table class="table table-striped">
+      <thead class="thead-green">
+        <tr>
+          <th>Status</th>
+          <th>Hospede</th>
+          <th>Quarto</th>
+          <th>Data Check in</th>
+          <th>Data Check out</th>
+          <th class="d-print-none"> Ações </th>
+        </tr>
+      </thead>
+      <tbody>
+        <% for (const hospedagem of hospedagens) { %>
+          <tr>
+            <td><%= hospedagem.status ? "Em aberto" : "Encerrado" %></td>
+            <td><%= hospedagem.nome %></td>
+            <td><%= hospedagem.titulo %></td>
+            <td><%= hospedagem.data_inicio %></td>
+            <td><%= hospedagem.data_fim %></td>
+            <td class="d-print-none">
+              <a class="btn btn-sm btn-warning" href="/detail-hospedagem/<%= hospedagem.id %>">Detalhar</a>
+              <a class="btn btn-sm btn-danger" href="/delete-hospedagem/<%= hospedagem.id %>">Excluir</a>
+            </td>
+          </tr>
+        <% } %>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<%- include("_footer") -%>

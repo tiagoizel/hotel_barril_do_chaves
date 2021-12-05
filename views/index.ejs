@@ -1,10 +1,3 @@
-<!-- <%- include("_header") -%>
-
-<h1>Bonjour le monde...</h1>
-
-<%- include("_footer") -%> -->
-
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -55,7 +48,7 @@
             <li><a href="#customers">Clientes</a></li>
         </ul>
         <button class="btn sign-up" data-toggle="modal" data-target="#modalCadastroHospede">Cadastre-se</button>
-        <button class="btn log-in">Entrar</button>
+        <a href="/login" class="btn log-in">Entrar</a>
     </div>
     <!-- end of side navbar -->
 
@@ -131,30 +124,30 @@
         </div>
     </section>
 
-    <!-- <div class = "book">
-            <form class = "book-form">
-                <div class = "form-item">
-                    <label for = "checkin-date">Data de Cheek in: </label>
-                    <input type = "date" id = "chekin-date">
+    <!-- <div class="book">
+            <form class="book-form">
+                <div class="form-item">
+                    <label for="checkin-date">Data de Cheek in: </label>
+                    <input type="date" id="chekin-date">
                 </div>
-                <div class = "form-item">
-                    <label for = "checkout-date">Data de Check Out: </label>
-                    <input type = "date" id = "chekout-date">
+                <div class="form-item">
+                    <label for="checkout-date">Data de Check Out: </label>
+                    <input type="date" id="chekout-date">
                 </div>
-                <div class = "form-item">
-                    <label for = "adult">Adultos: </label>
-                    <input type = "number" min = "1" value = "1" id = "adult">
+                <div class="form-item">
+                    <label for="adult">Adultos: </label>
+                    <input type="number" min="1" value="1" id="adult">
                 </div>
-                <div class = "form-item">
-                    <label for = "children">Criança: </label>
-                    <input type = "number" min = "1" value = "1" id = "children">
+                <div class="form-item">
+                    <label for="children">Criança: </label>
+                    <input type="number" min="1" value="1" id="children">
                 </div>
-                <div class = "form-item">
-                    <label for = "rooms">Quartos: </label>
-                    <input type = "number" min = "1" value = "1" id = "rooms">
+                <div class="form-item">
+                    <label for="rooms">Quartos: </label>
+                    <input type="number" min="1" value="1" id="rooms">
                 </div>
-                <div class = "form-item">
-                    <input type = "submit" class = "btn" value = "Reserve agora">
+                <div class="form-item">
+                    <input type="submit" class="btn" value="Reserve agora">
                 </div>
             </form>
         </div> -->
@@ -412,39 +405,36 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
+                <form action="/create-reserva" method="post">
                 <div class="modal-body">
-
-                    <form >
-                        <div class="form-group">
-                            <label for = "checkin-date">Data de Cheek in: </label>
-                            <input type="date" class="form-control" id="chekin-date">
-                        </div>
-                        <div class="form-group">
-                            <label for="checkout-date">Data de Check Out: </label>
-                            <input type="date" class="form-control" id = "chekout-date">
-                        </div>
-                        <div class="form-group">
-                            <label for = "adult">Adultos: </label>
-                            <input type = "number" min = "1" value = "1" class="form-control" id = "adult">
-                        </div>
-                        <div class="form-group">
-                            <label for = "children">Criança: </label>
-                            <input type = "number" min = "1" value = "1" class="form-control" id = "children">
-                        </div>
-                        <div class="form-group">
-                            <label for = "rooms">Quartos: </label>
-                            <input type = "number" min = "1" value = "1" class="form-control" id = "rooms">
-                        </div>
-                        <!-- <div class="form-group">
-                            <input type = "submit" class = "btn" value = "Reserve agora">
-                        </div> -->
-                    </form>
-
+                    <input type="hidden" value="2" name="id_hospede" />
+                    <input type="hidden" value="1" name="id_quarto" />
+                    <div class="form-group">
+                        <label for="checkin-date">Data de Cheek in: </label>
+                        <input type="date" class="form-control" id="chekin-date" name="data_inicio">
+                    </div>
+                    <div class="form-group">
+                        <label for="checkout-date">Data de Check Out: </label>
+                        <input type="date" class="form-control" id="chekout-date" name="data_fim">
+                    </div>
+                    <div class="form-group">
+                        <label for="adultos">Adultos: </label>
+                        <input type="number" min="1" value="1" class="form-control" id="adultos" name="qtd_adultos">
+                    </div>
+                    <div class="form-group">
+                        <label for="criancas">Crianças: </label>
+                        <input type="number" min="0" value="0" class="form-control" id="criancas" name="qtd_criancas">
+                    </div>
+                    <div class="form-group">
+                        <label for="observacao">Observação: </label>
+                        <textarea type="text" rows="4" cols="50" class="form-control" id="observacao" name="observacao"></textarea>
+                    </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn btn-primary">Confirmar</button>
                 </div>
+            </form>
             </div>
         </div>
     </div>
@@ -459,39 +449,36 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
+                <form action="/create-reserva" method="post">
                 <div class="modal-body">
-
-                    <form >
-                        <div class="form-group">
-                            <label for = "checkin-date">Data de Cheek in: </label>
-                            <input type="date" class="form-control" id="chekin-date">
-                        </div>
-                        <div class="form-group">
-                            <label for="checkout-date">Data de Check Out: </label>
-                            <input type="date" class="form-control" id = "chekout-date">
-                        </div>
-                        <div class="form-group">
-                            <label for = "adult">Adultos: </label>
-                            <input type = "number" min = "1" value = "1" class="form-control" id = "adult">
-                        </div>
-                        <div class="form-group">
-                            <label for = "children">Criança: </label>
-                            <input type = "number" min = "1" value = "1" class="form-control" id = "children">
-                        </div>
-                        <div class="form-group">
-                            <label for = "rooms">Quartos: </label>
-                            <input type = "number" min = "1" value = "1" class="form-control" id = "rooms">
-                        </div>
-                        <!-- <div class="form-group">
-                            <input type = "submit" class = "btn" value = "Reserve agora">
-                        </div> -->
-                    </form>
-
+                    <input type="hidden" value="3" name="id_hospede" />
+                    <input type="hidden" value="3" name="id_quarto" />
+                    <div class="form-group">
+                        <label for="checkin-date">Data de Cheek in: </label>
+                        <input type="date" class="form-control" id="chekin-date" name="data_inicio">
+                    </div>
+                    <div class="form-group">
+                        <label for="checkout-date">Data de Check Out: </label>
+                        <input type="date" class="form-control" id="chekout-date" name="data_fim">
+                    </div>
+                    <div class="form-group">
+                        <label for="adultos">Adultos: </label>
+                        <input type="number" min="1" value="1" class="form-control" id="adultos" name="qtd_adultos">
+                    </div>
+                    <div class="form-group">
+                        <label for="criancas">Crianças: </label>
+                        <input type="number" min="0" value="0" class="form-control" id="criancas" name="qtd_criancas">
+                    </div>
+                    <div class="form-group">
+                        <label for="observacao">Observação: </label>
+                        <textarea type="text" rows="4" cols="50" class="form-control" id="observacao" name="observacao"></textarea>
+                    </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn btn-primary">Confirmar</button>
                 </div>
+            </form>
             </div>
         </div>
     </div>
@@ -506,39 +493,36 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
+                <form action="/create-reserva" method="post">
                 <div class="modal-body">
-
-                    <form >
-                        <div class="form-group">
-                            <label for = "checkin-date">Data de Cheek in: </label>
-                            <input type="date" class="form-control" id="chekin-date">
-                        </div>
-                        <div class="form-group">
-                            <label for="checkout-date">Data de Check Out: </label>
-                            <input type="date" class="form-control" id = "chekout-date">
-                        </div>
-                        <div class="form-group">
-                            <label for = "adult">Adultos: </label>
-                            <input type = "number" min = "1" value = "1" class="form-control" id = "adult">
-                        </div>
-                        <div class="form-group">
-                            <label for = "children">Criança: </label>
-                            <input type = "number" min = "1" value = "1" class="form-control" id = "children">
-                        </div>
-                        <div class="form-group">
-                            <label for = "rooms">Quartos: </label>
-                            <input type = "number" min = "1" value = "1" class="form-control" id = "rooms">
-                        </div>
-                        <!-- <div class="form-group">
-                            <input type = "submit" class = "btn" value = "Reserve agora">
-                        </div> -->
-                    </form>
-
+                    <input type="hidden" value="1" name="id_hospede" />
+                    <input type="hidden" value="2" name="id_quarto" />
+                    <div class="form-group">
+                        <label for="checkin-date">Data de Cheek in: </label>
+                        <input type="date" class="form-control" id="chekin-date" name="data_inicio">
+                    </div>
+                    <div class="form-group">
+                        <label for="checkout-date">Data de Check Out: </label>
+                        <input type="date" class="form-control" id="chekout-date" name="data_fim">
+                    </div>
+                    <div class="form-group">
+                        <label for="adultos">Adultos: </label>
+                        <input type="number" min="1" value="1" class="form-control" id="adultos" name="qtd_adultos">
+                    </div>
+                    <div class="form-group">
+                        <label for="criancas">Crianças: </label>
+                        <input type="number" min="0" value="0" class="form-control" id="criancas" name="qtd_criancas">
+                    </div>
+                    <div class="form-group">
+                        <label for="observacao">Observação: </label>
+                        <textarea type="text" rows="4" cols="50" class="form-control" id="observacao" name="observacao"></textarea>
+                    </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn btn-primary">Confirmar</button>
                 </div>
+            </form>
             </div>
         </div>
     </div>
@@ -555,7 +539,8 @@
                     </div>
                     <form action="/create-hospede" method="post">
                         <div class="modal-body">
-
+                            <input type="hidden" value="2" name="id_hospede">
+                            <input type="hidden" value="3" name="id_quarto">
                             <div class="form-row">
                                 <div class="form-group col-md-6">
                                     <label for="inputNome">Nome</label>
@@ -570,7 +555,11 @@
                             <div class="form-row">
                                 <div class="form-group col-md-6">
                                     <label for="inputSexo">Sexo</label>
-                                    <input type="text" class="form-control" id="inputSexo" name="sexo" />
+                                    <select class="form-control" name="sexo">
+                                        <option value="M">Masculino</option>
+                                        <option value="F">Feminino</option>
+                                    </select>
+                                    <!-- <input type="text" class="form-control" id="inputSexo" name="sexo" /> -->
                                 </div>
                                 <div class="form-group col-md-6">
                                     <label for="inputCpf">CPF</label>

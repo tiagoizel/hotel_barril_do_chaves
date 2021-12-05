@@ -21,7 +21,10 @@
   <div class="form-row">
       <div class="form-group col-md-6">
           <label for="inputSexo">Sexo</label>
-          <input type="text" class="form-control" id="inputSexo" name="sexo" value="<%= hospede.sexo %>"/>
+          <select class="form-control" name="sexo">
+            <option value="M" <%= hospede.sexo == 'M' ? 'selected' : ''%> >Masculino</option>
+            <option value="F" <%= hospede.sexo == 'F' ? 'selected' : ''%> >Feminino</option>
+          </select>
       </div>
       <div class="form-group col-md-6">
           <label for="inputCpf">CPF</label>

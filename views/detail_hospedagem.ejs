@@ -1,0 +1,80 @@
+<%- include("_header") -%>
+
+  <h1>Atualizar dados de: <%= hospedagem.id %> </h1>
+
+  <form action="/edit-hospedagem/<%= hospedagem.id %>" method="post" class="mb-7">
+
+    <div class="form-horizontal">
+      <div class="form-row mb-4">
+        <input type="hidden" class="form-control" name="id_hospede" value="<%= hospedagem.id_hospede %>" />
+        <div class="form-group col-md-6">
+          <label for="inputNome">Hospede: </label>
+          <input type="text" class="form-control" id="inputNome" name="nome" value="<%= hospedagem.nome %>" disabled />
+        </div>
+        <div class="form-group col-md-6">
+          <label for="inputEmail">Email: </label>
+          <input type="text" class="form-control" id="inputEmail" name="email" value="<%= hospedagem.email %>"
+            disabled />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="inputQuarto">Quarto: </label>
+          <select class="form-control" name="id_quarto">
+            <option value="1" <%=hospedagem.id_quarto==1 ? 'selected' : '' %> >Quarto 71</option>
+            <option value="2" <%=hospedagem.id_quarto==2 ? 'selected' : '' %> >Quarto 14</option>
+            <option value="3" <%=hospedagem.id_quarto==3 ? 'selected' : '' %> >Quarto 72</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="inputAdultos">Adultos: </label>
+          <input type="number" min="1" class="form-control" id="inputAdultos" name="qtd_adultos"
+            value="<%= hospedagem.qtd_adultos %>" />
+        </div>
+        
+        <div class="form-group col-md-6">
+          <label for="inputCriancas">Crianças: </label>
+          <input type="number" min="0" class="form-control" id="inputCriancas" name="qtd_criancas"
+            value="<%= hospedagem.qtd_criancas %>" />
+        </div>
+        
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="inputCheckIn">Check in: </label>
+          <input type="date" class="form-control" id="inputCheckIn" name="data_inicio"
+            value="<%= hospedagem.data_inicio %>" />
+        </div>
+        <div class="form-group col-md-6">
+          <label for="inputCheckOut">Check out: </label>
+          <input type="date" class="form-control" id="inputCheckOut" name="data_fim"
+            value="<%= hospedagem.data_fim %>" />
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="inputStatus">Status: </label>
+          <select class="form-control" name="status">
+            <option value="1" <%= hospedagem.status ? 'selected' : '' %> >Em aberto</option>
+            <option value="0" <%= !hospedagem.status ? 'selected' : '' %> >Encerrado</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label class="col-form-label"></label>
+        <div class="col-sm-12">
+          <input type="submit" value="Confirmar" class="btn btn-default btn-warning" <%= !hospedagem.status ? 'disabled' : '' %>/>
+          <a class="btn btn-outline-dark cancel" href="/hospedagens">Cancelar</a>
+        </div>
+      </div>
+
+    </div>
+  </form>
+
+  <%- include("_footer") -%>
