@@ -1,8 +1,8 @@
 <%- include("_header") -%>
 
-<h1>Excluir este hospede?</h1>
+<h1>Excluir dados de <%= hospede.nome %>?</h1>
 
-<form action="/excluir-hospede/<%= hospede.id %>" method="post">
+<form action="/delete-hospede/<%= hospede.id %>" method="post">
   <div class="form-horizontal">
 
     <div class="form-group row">

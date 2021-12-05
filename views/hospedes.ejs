@@ -1,31 +1,33 @@
 <%- include("_header") -%>
 
-<h1>Lista de Hospedes (<%= hospedes.length %>)</h1>
+<div class="mt-5">
+  <h1>Lista de Hóspedes (<%= hospedes.length %>)</h1>
 
-<div class="table-responsive-sm">
-  <table class="table table-hover">
-    <thead>
-      <tr>
-        <th>Nome</th>
-        <th>Email</th>
-        <th>Telefone</th>
-        <th class="d-print-none"> Ações </th>
-      </tr>
-    </thead>
-    <tbody>
-      <% for (const hospede of hospedes) { %>
+  <div class="table-responsive-sm">
+    <table class="table table-striped">
+      <thead class="thead-green">
         <tr>
-          <td><%= hospede.nome %></td>
-          <td><%= hospede.email %></td>
-          <td><%= hospede.telefone %></td>
-          <td class="d-print-none">
-            <a class="btn btn-sm btn-warning" href="/edit/<%= hospede.id %>">Editar</a>
-            <a class="btn btn-sm btn-danger" href="/delete-hospede/<%= hospede.id %>">Excluir</a>
-          </td>
+          <th>Nome</th>
+          <th>Email</th>
+          <th>Telefone</th>
+          <th class="d-print-none"> Ações </th>
         </tr>
-      <% } %>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+        <% for (const hospede of hospedes) { %>
+          <tr>
+            <td><%= hospede.nome %></td>
+            <td><%= hospede.email %></td>
+            <td><%= hospede.telefone %></td>
+            <td class="d-print-none">
+              <a class="btn btn-sm btn-warning" href="/edit-hospede/<%= hospede.id %>">Editar</a>
+              <a class="btn btn-sm btn-danger" href="/delete-hospede/<%= hospede.id %>">Excluir</a>
+            </td>
+          </tr>
+        <% } %>
+      </tbody>
+    </table>
+  </div>
 </div>
 
 <%- include("_footer") -%>

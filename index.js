@@ -115,27 +115,27 @@ app.post("/create", (req, res) => {
 });
 
 // GET /edit/5
-app.get("/edit/:id", (req, res) => {
+app.get("/edit-hospede/:id", (req, res) => {
   const id = req.params.id;
-  const sql = "SELECT * FROM Livres WHERE Livre_ID = ?";
+  const sql = "SELECT * FROM HOSPEDE WHERE id = ?";
   db.get(sql, id, (err, row) => {
     if (err) {
       return console.error(err.message);
     }
-    res.render("edit", { model: row });
+    res.render("edit_hospede", { hospede: row });
   });
 });
 
 // POST /edit/5
-app.post("/edit/:id", (req, res) => {
+app.post("/edit-hospede/:id", (req, res) => {
   const id = req.params.id;
-  const book = [req.body.Titre, req.body.Auteur, req.body.Commentaires, id];
-  const sql = "UPDATE Livres SET Titre = ?, Auteur = ?, Commentaires = ? WHERE (Livre_ID = ?)";
-  db.run(sql, book, err => {
+  const hospede = [req.body.nome, req.body.sexo, req.body.cpf,req.body.email,req.body.telefone,req.body.data_nascimento,req.body.endereco, id];
+  const sql = "UPDATE HOSPEDE SET nome = ?, sexo = ?, cpf = ?, email = ?, telefone = ?, data_nascimento = ?, endereco = ? WHERE (id = ?)";
+  db.run(sql, hospede, err => {
     if (err) {
       return console.error(err.message);
     }
-    res.redirect("/livres");
+    res.redirect("/hospedes");
   });
 });
 
@@ -151,8 +151,8 @@ app.get("/delete-hospede/:id", (req, res) => {
   });
 });
 
-// POST /excluir-hospede/5
-app.post("/excluir-hospede/:id", (req, res) => {
+// POST /delete-hospede/5
+app.post("/delete-hospede/:id", (req, res) => {
   const id = req.params.id;
   const sql = "DELETE FROM HOSPEDE WHERE id = ?";
   db.run(sql, id, err => {

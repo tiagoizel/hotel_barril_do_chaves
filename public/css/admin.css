@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700;800;900&display=swap');
+
+:root{
+    --transition: all 0.7s ease;
+    --green: #00b16a;
+    --dark: #292826;
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', serif;
+}
+
+.thead-green {
+    background-color: var(--green);
+    color: #FFF;
+}
+
+.bg-green{
+    background: var(--green);
+}
+
+.nav-link {
+    color: #FFF !important;
+}
+
+footer {
+    position: fixed;
+    height: 40px;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
